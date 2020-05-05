@@ -21,12 +21,12 @@ def _parse_text(text):
     return current_temp
 
 def get_temp_in_f(lat, lng):
-    text = _get_text(43.0374, -77.7038) 
+    text = _get_text(lat, lng)
     current_temp = _parse_text(text)
     return int(float(current_temp))
 
 def get_temp_in_c(lat, lng):
-    text = _get_text(43.0374, -77.7038) 
+    text = _get_text(lat, lng)
     current_temp = _parse_text(text)
     temp = int(float(current_temp))
     return int( (temp - 32) * (5.0/9.0) )
